@@ -1,3 +1,8 @@
+<p align="center">
+<img width="1920" height="1080" alt="Apresentação EduAloca (1)" src="https://github.com/user-attachments/assets/a3f6d042-052b-4f2a-b458-f9f9977cbf50" />
+</p>
+
+
 # EduAloca - Sistema de Alocação Acadêmica
 
 Este projeto é a API RESTful desenvolvida em Java para resolver o problema de alocação acadêmica. A aplicação é responsável por gerenciar e orquestrar as entidades centrais do ambiente educacional (docentes, turmas, salas, etc.), servindo como o motor principal para a distribuição e alocação de recursos.
@@ -60,3 +65,12 @@ Para levantar todo o ecossistema (banco de dados e a própria API) de forma cont
    ```bash
    docker-compose up -d
    ```
+
+##  Equipe Desenvolvedora
+
+* **Diogo Montalvão** — Back-End
+* **Fernanda Santos** — Back-End
+* **Naara Reis** — Back-End
+* **Rennan Rangel** — Front-End
+
+   
