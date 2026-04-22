@@ -298,8 +298,7 @@ As diretrizes que orientam seu design e sua evolucao garantem maior estabilidade
 <br>
 
 <p align="center">
-<img width="1157" height="514" alt="image" src="https://github.com/user-attachments/assets/85d0855d-57a8-4e6c-bdc6-4af29a1df780" />
-
+  <img width="1157" alt="image" src="https://github.com/user-attachments/assets/f15ad491-a6d8-4946-a703-6d7ae6d140f8" />
 </p>
 
 <br>
