@@ -295,6 +295,12 @@ A arquitetura do sistema serve como base para seu desenvolvimento, sua manutenca
 
 As diretrizes que orientam seu design e sua evolucao garantem maior estabilidade, menor acoplamento e melhores condicoes para o crescimento sustentavel da aplicacao. Dessa forma, o conteudo apresentado contempla a explicacao da arquitetura do sistema e mostra como ela contribui diretamente para o sucesso do deployment.
 
+<br>
+
+<p align="center">
+<img width="1157" height="514" alt="image" src="https://github.com/user-attachments/assets/85d0855d-57a8-4e6c-bdc6-4af29a1df780" />
+
+</p>
 
 <br>
 
