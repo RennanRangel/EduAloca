@@ -150,37 +150,12 @@ Para padronizar a execucao em diferentes ambientes, foi utilizado Docker, permit
 
 <br>
 
-## Objetivo da Arquitetura
+<p align="center">
+  <img width="1157" alt="image src="<img width="1525" height="554" alt="image" src="https://github.com/user-attachments/assets/e308e8d8-7457-472b-be81-7a6b197671e9" />
+</p>
 
 <br>
 
-Os principais objetivos desta arquitetura são:
-
-<br>
-
-- separar responsabilidades entre interface, regras de negocio, persistencia e infraestrutura.
-
-<br>
-
-- facilitar o desenvolvimento, a manutencao e a evolucao do sistema.
-
-<br>
-
-- tornar o deployment mais simples e padronizado com containers
-
-<br>
-
-- reduzir problemas de configuracao entre ambientes
-
-<br>
-
-- permitir o crescimento do sistema com menos acoplamento entre os componentes
-
-<br>
-
-- aumentar a previsibilidade e a confiabilidade da implantacao
-
-<br>
 
 ## Componentes Principais
 
@@ -192,16 +167,6 @@ Os principais objetivos desta arquitetura são:
 | Back-End | Java Spring Boot | Atua como o nucleo da aplicacao. Recebe as requisicoes do front-end, executa as regras de negocio, valida dados e coordena o acesso ao banco de dados. |
 | Banco de Dados | Sistema de persistencia | Responsavel pelo armazenamento persistente das informacoes. Permite cadastrar, consultar, alterar e remover dados com consistencia. |
 | Docker | Conteinerizacao | Utilizado para empacotar e executar a aplicacao em containers, garantindo maior consistencia entre os ambientes de desenvolvimento, teste e producao. |
-
-<br>
-
-## Relacionamento entre os Componentes
-
-<br>
-
-A arquitetura do sistema funciona a partir da interacao coordenada entre seus componentes. O usuario acessa a interface por meio do front-end, que captura suas acoes e encaminha requisicoes ao back-end. O back-end processa essas solicitacoes, aplica as regras de negocio e, quando necessario, realiza operacoes no banco de dados. Em seguida, a resposta e devolvida ao front-end, que apresenta o resultado final ao usuario.
-
-O Docker atua como suporte ao ambiente de execucao, garantindo que todos esses componentes possam ser executados de forma padronizada em diferentes contextos, reduzindo inconsistencias entre os ambientes de desenvolvimento, teste e producao.
 
 <br>
 
@@ -219,87 +184,6 @@ O Docker atua como suporte ao ambiente de execucao, garantindo que todos esses c
 
 <br>
 
-## Diretrizes que Orientam o Design e a Evolucao
-
-<br>
-
-A arquitetura do sistema foi definida com base em diretrizes que contribuem para sua organizacao, crescimento e sustentabilidade ao longo do tempo. Entre essas diretrizes, destaca-se a modularidade, que facilita a manutencao e a expansao do sistema. Tambem foi adotada a separacao de responsabilidades entre interface, negocio, persistencia e infraestrutura, permitindo maior clareza estrutural.
-
-Outra diretriz importante e o baixo acoplamento entre os componentes, o que reduz impactos de alteracoes e favorece a evolucao do sistema. A arquitetura tambem busca facilitar testes e validacoes, melhorar a escalabilidade para novas funcionalidades, padronizar o deploy e a configuracao com o uso de Docker e permitir uma evolucao incremental sem comprometer a estabilidade da aplicacao.
-
-<br>
-
-## Como a Arquitetura Apoia o Deploy
-
-<br>
-
-A arquitetura e crucial para o sucesso da implantacao porque define como o sistema sera distribuido, configurado e executado no ambiente de producao. Com a utilizacao de Docker, o deployment se torna mais eficiente, pois a aplicacao passa a ser executada em um ambiente isolado e padronizado.
-
-Entre os principais beneficios para o deployment, destacam-se:
-
-<br>
-
-- padronizacao do ambiente de execucao.
-
-<br>
-
-- facilidade para subir a aplicacao em diferentes servidores.
-
-<br>
-
-- reducao de erros de configuracao.
-
-<br>
-
-- melhor organizacao entre os servicos do sistema.
-
-<br>
-
-- maior previsibilidade no processo de publicacao.
-
-<br>
-
-## Beneficios da Arquitetura Modular
-
-<br>
-
-- separacao clara entre front-end, back-end, banco de dados e infraestrutura
-
-<br>
-
-- facilidade de manutencao e evolucao do codigo
-
-<br>
-
-- melhor organizacao estrutural do projeto.
-
-<br>
-
-- possibilidade de escalar componentes de forma mais controlada.
-
-<br>
-
-- maior confiabilidade no deployment com Docker.
-
-<br>
-
-- melhor adaptacao a novos requisitos e funcionalidades
-
-<br>
-
-## Conclusao
-
-<br>
-
-A arquitetura do sistema serve como base para seu desenvolvimento, sua manutencao e sua implantacao. Ao adotar uma estrutura modular com HTML, CSS e JavaScript no front-end, Java Spring Boot no back-end, banco de dados para persistencia e Docker na conteinerizacao, o sistema se torna mais organizado, reutilizavel, escalavel e preparado para evoluir com mais seguranca.
-
-As diretrizes que orientam seu design e sua evolucao garantem maior estabilidade, menor acoplamento e melhores condicoes para o crescimento sustentavel da aplicacao. Dessa forma, o conteudo apresentado contempla a explicacao da arquitetura do sistema e mostra como ela contribui diretamente para o sucesso do deployment.
-
-<br>
-
-<p align="center">
-  <img width="1157" alt="image src="<img width="1525" height="554" alt="image" src="https://github.com/user-attachments/assets/e308e8d8-7457-472b-be81-7a6b197671e9" />
-</p>
 
 <br>
 
