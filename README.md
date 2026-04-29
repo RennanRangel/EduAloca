@@ -184,6 +184,64 @@ Para padronizar a execucao em diferentes ambientes, foi utilizado Docker, permit
 
 <br>
 
+# Requisitos Mínimos de Servidor
+
+Para garantir o bom funcionamento, desempenho e escalabilidade do sistema EduAloca em ambiente de produção ou homologação, recomenda-se a seguinte configuração mínima de infraestrutura:
+
+| Recurso | Especificação Mínima | Justificativa |
+| --- | --- | --- |
+| Processador (vCPU) | 2 núcleos | Suficiente para processar o gerenciamento de dados do sistema e alocação do calendario.|
+| Memória RAM | 8 GB | Necessário para rodar a aplicação em um bom desempenho. |
+| Armazenamento | 100 GB em disco NVMe | Espaço para o sistema operacional, aplicação, banco de dados e futuras expansões de dados. |
+
+<br><br>
+
+## Justificativa Detalhada
+
+<br>
+
+### 2 núcleos de vCPU
+
+A separação de responsabilidades é importante porque o motor de alocação de calendário pode ser intenso. Manter um núcleo disponível para o gerenciamento garante que a interface e as operações básicas do sistema não fiquem lentas enquanto o motor de alocação está processando.
+
+<br>
+
+### 8GB de RAM
+
+<br>
+
+Com um volume grande de dados, uma quantidade reduzida de RAM pode causar aumento significativo de leituras em disco, prejudicando o desempenho. Os 8 GB serão divididos entre a JVM da aplicação e o banco de dados. Em cenários de alto volume, esta quantidade é considerada o mínimo viável.
+
+<br>
+
+### 100 GB em disco NVMe
+
+<br>
+
+Embora o sistema trabalhe com um volume considerável de informações, 100 GB oferecem espaço mais do que suficiente para armazenar todos os dados atuais e permitir um crescimento natural por vários anos, sem risco imediato de falta de espaço.
+
+
+<br><br><br>
+
+# Capacidade Estimada de Usuários
+
+<br>
+
+Com a configuração mínima definida (2 vCPU, 8 GB de RAM e 100 GB NVMe), o sistema EduAloca foi dimensionado para atender instituições de pequeno e médio porte.
+
+<br>
+
+| Tipo de Carga | Quantidade Estimada de Usuários | Observação |
+| --- | --- | --- |
+| Usuários Totais  |  50 | Inclui coordenadores, docentes e funcionários administrativos. |
+
+
+<br>
+
+Essa configuração garante boa performance e estabilidade, especialmente porque o sistema envolve regras de negócio complexas de alocação de horários, turmas, docentes e salas.
+
+
+
 
 <br>
 
