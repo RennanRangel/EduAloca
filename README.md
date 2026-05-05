@@ -31,6 +31,26 @@ O projeto adota uma arquitetura de monólito modular, com o código organizado e
 
 <br>
 
+## Componentes Principais
+
+<br>
+
+| Componente | Tecnologia | Responsabilidade |
+| --- | --- | --- |
+| Front-End | HTML, CSS e JavaScript | Responsavel pela interface visual do sistema e pela interacao com o usuario. Exibe informacoes, coleta dados e envia requisicoes para o back-end. |
+| Back-End | Java Spring Boot | Atua como o nucleo da aplicacao. Recebe as requisicoes do front-end, executa as regras de negocio, valida dados e coordena o acesso ao banco de dados. |
+| Banco de Dados | Sistema de persistencia | Responsavel pelo armazenamento persistente das informacoes. Permite cadastrar, consultar, alterar e remover dados com consistencia. |
+| Docker | Conteinerizacao | Utilizado para empacotar e executar a aplicacao em containers, garantindo maior consistencia entre os ambientes de desenvolvimento, teste e producao. |
+
+<br>
+
+<br>
+
+<p align="center">
+  <img width="1157" alt="image src="<img width="1525" height="554" alt="image" src="https://github.com/user-attachments/assets/e308e8d8-7457-472b-be81-7a6b197671e9" />
+</p>
+
+<br>
 
 ## Endpoints da API
 
@@ -118,55 +138,13 @@ CREATE DATABASE banco_sistema_alocacao;
 
 ## Como Executar via Docker
 
-Para levantar todo o ecossistema backend de forma conteinerizada, utilize o Docker Compose:
+Para levantar todo o ecossistema (banco de dados) de forma conteinerizada, utilize o Docker Compose:
 
 1. Na raiz do diretório `back-end`, abra o terminal.
 2. Execute o comando:
    ```bash
-   docker compose up --build -d
+   docker-compose up -d
    ```
-
-<br>
-
-# Arquitetura do Sistema
-
-<br>
-
-## Visao Geral
-
-A arquitetura de software e a organizacao fundamental de um sistema, composta por seus componentes, os relacionamentos entre eles e as diretrizes que orientam seu design e sua evolucao. Ela funciona como um plano estrutural que define como as diferentes partes da aplicacao interagem entre si e como o sistema pode crescer de forma organizada ao longo do tempo.
-
-Neste projeto, a arquitetura foi definida de forma modular, com separacao clara entre front-end, back-end, banco de dados e ambiente de execucao. Essa organizacao contribui para a manutencao do sistema, facilita a evolucao das funcionalidades e torna o deployment mais seguro, padronizado e previsivel.
-
-<br>
-
-No lado do cliente, o sistema utiliza HTML, CSS e JavaScript para construir a interface e proporcionar a experiencia do usuario. 
-
-No back-end, a aplicacao foi desenvolvida com Java Spring Boot, concentrando a logica de negocio, o processamento das requisicoes e a comunicacao com a camada de dados. 
-
-O banco de dados e responsavel pelo armazenamento persistente das informacoes. 
-
-Para padronizar a execucao em diferentes ambientes, foi utilizado Docker, permitindo empacotar os servicos e simplificar a implantacao.
-
-<br>
-
-<p align="center">
-  <img width="1157" alt="image src="<img width="1525" height="554" alt="image" src="https://github.com/user-attachments/assets/e308e8d8-7457-472b-be81-7a6b197671e9" />
-</p>
-
-<br>
-
-
-## Componentes Principais
-
-<br>
-
-| Componente | Tecnologia | Responsabilidade |
-| --- | --- | --- |
-| Front-End | HTML, CSS e JavaScript | Responsavel pela interface visual do sistema e pela interacao com o usuario. Exibe informacoes, coleta dados e envia requisicoes para o back-end. |
-| Back-End | Java Spring Boot | Atua como o nucleo da aplicacao. Recebe as requisicoes do front-end, executa as regras de negocio, valida dados e coordena o acesso ao banco de dados. |
-| Banco de Dados | Sistema de persistencia | Responsavel pelo armazenamento persistente das informacoes. Permite cadastrar, consultar, alterar e remover dados com consistencia. |
-| Docker | Conteinerizacao | Utilizado para empacotar e executar a aplicacao em containers, garantindo maior consistencia entre os ambientes de desenvolvimento, teste e producao. |
 
 <br>
 
@@ -194,56 +172,8 @@ Para garantir o bom funcionamento, desempenho e escalabilidade do sistema EduAlo
 | Memória RAM | 8 GB | Necessário para rodar a aplicação em um bom desempenho. |
 | Armazenamento | 100 GB em disco NVMe | Espaço para o sistema operacional, aplicação, banco de dados e futuras expansões de dados. |
 
-<br><br>
-
-## Justificativa Detalhada
-
 <br>
 
-### 2 núcleos de vCPU
-
-A separação de responsabilidades é importante porque o motor de alocação de calendário pode ser intenso. Manter um núcleo disponível para o gerenciamento garante que a interface e as operações básicas do sistema não fiquem lentas enquanto o motor de alocação está processando.
-
-<br>
-
-### 8GB de RAM
-
-<br>
-
-Com um volume grande de dados, uma quantidade reduzida de RAM pode causar aumento significativo de leituras em disco, prejudicando o desempenho. Os 8 GB serão divididos entre a JVM da aplicação e o banco de dados. Em cenários de alto volume, esta quantidade é considerada o mínimo viável.
-
-<br>
-
-### 100 GB em disco NVMe
-
-<br>
-
-Embora o sistema trabalhe com um volume considerável de informações, 100 GB oferecem espaço mais do que suficiente para armazenar todos os dados atuais e permitir um crescimento natural por vários anos, sem risco imediato de falta de espaço.
-
-
-<br><br><br>
-
-# Capacidade Estimada de Usuários
-
-<br>
-
-Com a configuração mínima definida (2 vCPU, 8 GB de RAM e 100 GB NVMe), o sistema EduAloca foi dimensionado para atender instituições de pequeno e médio porte.
-
-<br>
-
-| Tipo de Carga | Quantidade Estimada de Usuários | Observação |
-| --- | --- | --- |
-| Usuários Totais  |  50 | Inclui coordenadores, docentes e funcionários administrativos. |
-
-
-<br>
-
-Essa configuração garante boa performance e estabilidade, especialmente porque o sistema envolve regras de negócio complexas de alocação de horários, turmas, docentes e salas.
-
-
-
-
-<br>
 
 ##  Equipe Desenvolvedora
 
