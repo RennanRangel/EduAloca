@@ -118,12 +118,12 @@ CREATE DATABASE banco_sistema_alocacao;
 
 ## Como Executar via Docker
 
-Para levantar todo o ecossistema (banco de dados) de forma conteinerizada, utilize o Docker Compose:
+Para levantar todo o ecossistema backend de forma conteinerizada, utilize o Docker Compose:
 
 1. Na raiz do diretório `back-end`, abra o terminal.
 2. Execute o comando:
    ```bash
-   docker-compose up -d
+   docker compose up --build -d
    ```
 
 <br>
